@@ -75,7 +75,7 @@ createInvoice(params).then(result => {
 Mengambil riwayat transaksi :
 ```
 const params = {
-  phone: "YOUR CUSTOMER PHONE NUMBER"
+  phone: "NOMOR TELEPON"
 }
 getInvoice(params).then(result => {
   console.log(result);
