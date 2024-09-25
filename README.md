@@ -61,13 +61,23 @@ Checkout Voucher & Create Invoice :
 var item_id = 'ID PRODUK ANDA';
 const params = {
   "item_id" : item_id,
-  "name" : 'Septiana Harun',
-  "phone" : '081617849221',
+  "name" : 'NAMA CUSTOMER',
+  "phone" : 'NOMOR TELEPON',
   "paymentMethod" : 'BR',
   "returnUrl" : "$(link-login-only)"
 }
 
 createInvoice(params).then(result => {
+  console.log(result);
+});
+```
+
+Mengambil riwayat transaksi :
+```
+const params = {
+  phone: "YOUR CUSTOMER PHONE NUMBER"
+}
+getInvoice(params).then(result => {
   console.log(result);
 });
 ```
