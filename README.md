@@ -13,7 +13,7 @@ const apiKey = 'API_KEY_ANDA';
 const routerID = 'ROUTER_ID';
 ```
 
-Setelah anda menyesuaikan kedua variable tersebut, Anda harus menambahkan baris kode berikut kedalam tag <body></body> pada file HTML anda.
+Setelah anda menyesuaikan kedua variable tersebut, Anda harus menambahkan baris kode berikut kedalam tag body pada file HTML anda.
 
 ```
 <script type="text/javascript" src="jquery-3.7.1.js"></script>
