@@ -9,14 +9,23 @@
 	<script type="text/javascript" src="jquery-3.7.1.js"></script>
 	<script type="text/javascript" src="niceradius.js"></script>
 	<script type="text/javascript">
+		// mengambil data NAS
 		getData('preferences').then(result => {console.log(result);});
+
+		// mengambil data pengumuman
 		getData('notice').then(result => {console.log(result);});
+
+		// mengambil data gambar slide
 		getData('images').then(result => {console.log(result);});
+
+		// mengambil daftar harga / hotspot profile
 		getData('pricing').then(result => {console.log(result);});
 
+		// mengambil metode pembayaran yang tersedia 
 		getPaymentMethod('*2').then(result => {console.log(result);});
 
-		const params = {
+		// checkout voucher / create invoice.
+		var params = {
 			"item_id" : '*6',
 			"name" : 'Septiana Harun',
 			"phone" : '081617849221',
@@ -25,7 +34,13 @@
 		}
 		createInvoice(params).then(result => {
 			console.log(result);
-		})
+		});
+
+		// mengambil data riwayat transaksi
+		var params = {
+			phone: "081617849221"
+		}
+		getInvoice(params).then(result => {console.log(result);});
 	</script>
 </body>
 </html>
