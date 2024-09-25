@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript" src="jquery-3.7.1.js"></script>
+	<script type="text/javascript" src="niceradius.js"></script>
+	<script type="text/javascript">
+		getData('preferences').then(result => {console.log(result);});
+		getData('notice').then(result => {console.log(result);});
+		getData('images').then(result => {console.log(result);});
+		getData('pricing').then(result => {console.log(result);});
+
+		getPaymentMethod('*2').then(result => {console.log(result);});
+
+		const params = {
+			"item_id" : '*6',
+			"name" : 'Septiana Harun',
+			"phone" : '081617849221',
+			"paymentMethod" : 'BR',
+			"returnUrl" : "$(link-login-only)"
+		}
+		createInvoice(params).then(result => {
+			console.log(result);
+		})
+	</script>
+</body>
+</html>
