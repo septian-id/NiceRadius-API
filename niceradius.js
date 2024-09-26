@@ -38,3 +38,15 @@ async function createInvoice(params){
 		});
 	})
 }
+async function getInvoice(params){
+    params.apiKey = apiKey;
+    return new Promise(resolve => {
+        $.ajax({
+            type: 'post',
+            url: apiUrl + '/get_transaction',
+            success: (data) => {
+                resolve(data);
+            }
+        });
+    });
+}
