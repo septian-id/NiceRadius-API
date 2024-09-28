@@ -8,48 +8,48 @@ Yang pertama anda harus menyesuaikan beberapa variable apiKey dan routerID pada 
 
 Jika anda belum memilikinya, Silahkan daftar disini https://niceradius.com untuk mendapatkan apiKey anda.
 
-```
+```js
 const apiKey = 'API_KEY_ANDA';
 const routerID = 'ROUTER_ID';
 ```
 
 Setelah anda menyesuaikan kedua variable tersebut, Anda harus menambahkan baris kode berikut kedalam tag body pada file HTML anda.
 
-```
+```html
 <script type="text/javascript" src="jquery-3.7.1.js"></script>
 <script type="text/javascript" src="niceradius.js"></script>
 ```
 
 Mengambil data NAS :
-```
+```js
 getData('preferences').then(result => {
   console.log(result);
 });
 ```
 
 Mengambil data pengumuman :
-```
+```js
 getData('notice').then(result => {
   console.log(result);
 });
 ```
 
 Mengambil data gambar slide :
-```
+```js
 getData('images').then(result => {
   console.log(result);
 });
 ```
 
 Mengambil daftar harga / profile voucher :
-```
+```js
 getData('pricing').then(result => {
   console.log(result);
 });
 ```
 
 Mengambil daftar metode pembayaran yang tersedia :
-```
+```js
 var product_id = 'ID PRODUK ANDA';
 getPaymentMethod(product_id).then(result => {
   console.log(result);
@@ -57,7 +57,7 @@ getPaymentMethod(product_id).then(result => {
 ```
 
 Checkout Voucher & Create Invoice :
-```
+```js
 var item_id = 'ID PRODUK ANDA';
 const params = {
   "item_id" : item_id,
@@ -73,7 +73,7 @@ createInvoice(params).then(result => {
 ```
 
 Mengambil riwayat transaksi :
-```
+```js
 const params = {
   phone: "NOMOR TELEPON"
 }
