@@ -1,7 +1,3 @@
-//==================================================CONFIG====================================
-const apiKey = 'API_KEY_ANDA';
-const routerID = 'ROUTER_ID';
-//==================================================CONFIG====================================
 const apiUrl = 'https://niceradius.com/api';
 async function getData(path){
 	return new Promise(resolve => {
