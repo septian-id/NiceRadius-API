@@ -16,8 +16,9 @@ const routerID = 'ROUTER_ID';
 Setelah anda menyesuaikan kedua variable tersebut, Anda harus menambahkan baris kode berikut kedalam tag body pada file HTML anda.
 
 ```html
-<script type="text/javascript" src="jquery-3.7.1.js"></script>
-<script type="text/javascript" src="niceradius.js"></script>
+<script type="text/javascript" src="js/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="js/niceradius.js"></script>
+<script type="text/javascript" src="config.js"></script>
 ```
 
 Mengambil data NAS :
